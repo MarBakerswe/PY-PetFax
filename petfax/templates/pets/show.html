@@ -9,14 +9,13 @@
 </head>
 <body>
     <section>
-        <h1>Welcome to Pet Fax</h1>
         <div class="pet-grid">
-            {% for pet in pets %}
+            <span style="font-weight: 800">Did you know?</span><br/>{{ pet.pet_fact }}
             <div class="pet-item">
                 <h2>{{pet.pet_name}}</h2>
-                <img src="{{ pet.pet_photo}}" alt="{{ pet.pet_alt }}">
+                <img src="{{ url_for('static', filename='assets/') }}{{ pet.pet_photo }}"/>
             </div>
-            {% endfor %}
+            <a href="/pets">Go back</a>
         </div>
     </section>
 </body>
