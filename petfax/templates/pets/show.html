@@ -13,7 +13,7 @@
             <span style="font-weight: 800">Did you know?</span><br/>{{ pet.pet_fact }}
             <div class="pet-item">
                 <h2>{{pet.pet_name}}</h2>
-                <img src="{{ url_for('static', filename='assets/') }}{{ pet.pet_photo }}"/>
+                <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_alt }}">
             </div>
             <a href="/pets">Go back</a>
         </div>
